@@ -11,13 +11,13 @@ I plan to solve all of these puzzles using Java and/or C++.  Details are in the 
 
 [2012 Puzzles](http://web.archive.org/web/20120818125155/http://www.spotify.com/us/jobs/tech/)
 
-Best Before
+Best Before  
 Difficulty: Reggae
 
-Ticket Lottery
+Ticket Lottery  
 Difficulty: Funk
 
-Bilateral Projects
+Bilateral Projects  
 Difficulty: Heavy metal
 
 
@@ -26,12 +26,12 @@ Difficulty: Heavy metal
 
 [2013 Puzzles](http://web.archive.org/web/20130531225639/https://www.spotify.com/us/jobs/tech/)
 
-Reversed Binary - __COMPLETED__
+Reversed Binary - __COMPLETED__  
 Difficulty: Reggae
 
-Zipf's song
+Zipf's song  
 Difficulty: Funk
 
-Cat vs. Dog
+Cat vs. Dog  
 Difficulty: Heavy metal
 
