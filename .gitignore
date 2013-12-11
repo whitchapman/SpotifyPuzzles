@@ -1,3 +1,13 @@
+# Miscellaneous
+.DS_Store
+*~
+
+# Java
+*.class
+
+# Executables
+*.exe
+
 # Compiled Object files
 *.slo
 *.lo
