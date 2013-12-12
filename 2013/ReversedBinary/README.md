@@ -11,7 +11,7 @@ The puzzle:
 C++
 ---
 
-The C++ solution consists of two iterations:  the first to find the highest order bit, and the second to sum the result.  It runs in 2 * log (input).
+The C++ solution consists of two iterations:  the first to find the highest order bit, and the second to sum the result.  It runs in 2 * log (input).  Spotify Status: Accepted
 
 Compile:  
 g++ binary_reverse.cpp -o binary_reverse.exe
@@ -20,14 +20,14 @@ Run (expects an integer as input):
 ./binary_reverse.exe
 
 Run using sample inputs from the Spotify puzzle page:  
-./binary_reverse.exe < sample-input1.txt  
-./binary_reverse.exe < sample-input2.txt
+./binary_reverse.exe < ../sample-input1.txt  
+./binary_reverse.exe < ../sample-input2.txt
 
 
 Java
 ----
 
-The Java solution is aided by the Integer.toBinaryString function.
+The Java solution is aided by the Integer.toBinaryString function.  Spotify Status: Accepted
 
 Compile:  
 javac BinaryReverse.java
@@ -36,6 +36,6 @@ Run (expects an integer as input):
 java BinaryReverse
 
 Run using sample inputs from the Spotify puzzle page:  
-java BinaryReverse < sample-input1.txt  
-java BinaryReverse < sample-input2.txt
+java BinaryReverse < ../sample-input1.txt  
+java BinaryReverse < ../sample-input2.txt
 
