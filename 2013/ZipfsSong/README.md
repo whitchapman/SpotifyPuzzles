@@ -12,12 +12,12 @@ The puzzle:
 C++
 ---
 
-The C++ solution is a linked list implementation that runs in n^2 time for insertions.  Spotify Status: TBD
+The C++ solution is a linked list implementation that runs in n^2 time for insertions and constant time for accessing.  A faster time solution would be to use a binary tree for n log n insertions and access.  Spotify Status: Wrong Answer -- the solution works for the two given samples but there must be a bug for an edge case; unfortunately, Spotify does not give any more information.
 
 Compile:  
 g++ zipfs_song.cpp -o zipfs_song.exe
 
-Run (expects an integer as input):  
+Run:  
 ./zipfs_song.exe
 
 Run using sample inputs from the Spotify puzzle page:  
@@ -33,7 +33,7 @@ The Java solution makes use of the Comparable interface and the TreeSet implemen
 Compile:  
 javac ZipfsSong.java
 
-Run (expects an integer as input):  
+Run:  
 java ZipfsSong
 
 Run using sample inputs from the Spotify puzzle page:  

@@ -29,7 +29,7 @@ Difficulty: Heavy metal
 Reversed Binary - __COMPLETED__  
 Difficulty: Reggae
 
-Zipf's song  
+Zipf's song - __WORKING__  
 Difficulty: Funk
 
 Cat vs. Dog  
