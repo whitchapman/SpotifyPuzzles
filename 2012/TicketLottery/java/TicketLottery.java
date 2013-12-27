@@ -1,5 +1,7 @@
 import java.io.*;
 import java.util.*;
+import java.math.BigDecimal;
+import java.math.MathContext;
 
 class Combination {
 	private int n;
@@ -47,19 +49,19 @@ class Combination {
 
 class Factorials {
 
-	public static double divide(int num, int den) {
-		double result = 1.0;
+	public static BigDecimal divide(int num, int den) {
+		BigDecimal result = BigDecimal.ONE;
 
 		if (num < den) {
 
 			for (int i = num+1; i <= den; i++) {
-				result /= (double)i;
+				result = result.divide(new BigDecimal(i), MathContext.DECIMAL64);
 			}
 
 		} else if (num > den) {
 
 			for (int i = den+1; i <= num; i++) {
-				result *= (double)i;
+				result = result.multiply(new BigDecimal(i), MathContext.DECIMAL64);
 			}
 
 		}
@@ -113,10 +115,10 @@ class CombinationOperator {
 		}
 	}
 
-	public double value() {
+	public BigDecimal value() {
 
 		if (this.is_zero) {
-			return 0.0;
+			return BigDecimal.ZERO;
 		}
 
 		Collections.sort(this.nums);
@@ -124,7 +126,7 @@ class CombinationOperator {
 
 		//minimize the number of mathematical operations by using factorial division to cancel out as much as possible
 
-		double result = 1.0;
+		BigDecimal result = BigDecimal.ONE;
 
 		int i = this.nums.size() - 1;
 		int j = this.dens.size() - 1;
@@ -141,7 +143,7 @@ class CombinationOperator {
 				den = this.dens.get(j);
 			}
 
-			result *= Factorials.divide(num, den);
+			result = result.multiply(Factorials.divide(num, den), MathContext.DECIMAL64);
 
 			i--;
 			j--;
@@ -153,7 +155,7 @@ class CombinationOperator {
 
 public class TicketLottery {
 
-	private static double calculate(CombinationOperator co, int m, int n, int p, int x) {
+	private static BigDecimal calculate(CombinationOperator co, int m, int n, int p, int x) {
 
 		co.reset();
 
@@ -202,16 +204,16 @@ public class TicketLottery {
 
 			CombinationOperator co = new CombinationOperator();
 
-			double sum = 0.0;
+			BigDecimal sum = BigDecimal.ZERO;
 			for (int x=min; x <= max; x++) {
 
-				double result = calculate(co, m, n, p, x);
-				//System.out.println("P(" + x + ") = " + result + "\n");
+				BigDecimal result = calculate(co, m, n, p, x);
+				//System.out.println("P(" + x + ") = " + result);
 
-				sum += result;
+				sum = sum.add(result, MathContext.DECIMAL64);
 			}
 
-			System.out.println(String.format("%.10f", sum));
+			System.out.println(String.format("%.10f", sum.doubleValue()));
 
 		} catch (IOException exn) {
 			System.err.print("Exception reading from stdin:  ");

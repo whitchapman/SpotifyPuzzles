@@ -14,7 +14,7 @@ I plan to solve all of these puzzles using Java and/or C++.  Details are in the 
 Best Before - __ACCEPTED__  
 Difficulty: Reggae
 
-Ticket Lottery  
+Ticket Lottery - __ACCEPTED__  
 Difficulty: Funk
 
 Bilateral Projects  

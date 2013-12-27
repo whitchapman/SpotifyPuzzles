@@ -21,11 +21,24 @@ P(x) = ---------------------
 C++
 ---
 
+The C++ solution uses a decimal implentation based on a long with an exponent field.  The class was coded to be only robust enough to address the problem's requirements.
+
+Spotify Status: Wrong Answer -- the decimal implementation gives the same answers to the sample inputs as the Java program; however, there must be an edge case that is still incorrect.
+
+Compile:
+g++ ticket_lottery.cpp -o ticket_lottery.exe
+
+Run:
+./ticket_lottery.exe
+
+Run using sample inputs from the Spotify puzzle page:
+./ticket_lottery.exe < ../sample-input1.txt
+./ticket_lottery.exe < ../sample-input2.txt
 
 Java
 ----
 
-Spotify Status: Wrong Answer -- there must be an unhandled edge case or a lack of precision in the solution
+Spotify Status: Accepted -- by switching from double to BigDecimal with DECIMAL64 precision, the program was accepted.
 
 Compile:  
 javac TicketLottery.java
